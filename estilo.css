@@ -1,0 +1,316 @@
+/* ====== FONTES ====== */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Press+Start+2P&display=swap');
+
+
+:root {
+    --cor-fundo: #ffc0e2;      
+    --cor-container: #dfd7da; 
+    --cor-texto: #6c063c;       
+    --cor-botao: #f54ea7;      
+    --cor-destaque: #c8c1c4;    
+    --cor-branco: #ffffff;
+    --cor-sombra: rgba(17, 17, 95, 0.25);
+}
+/* ====== RESET ====== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.container {
+    background: var(--cor-container);
+    border-radius: 24px;
+    box-shadow: 0 15px 40px var(--cor-sombra);
+    padding: 40px;
+    max-width: 950px;
+    width: 100%;
+    border: 1px solid var(--cor-texto);
+}
+
+/* ====== TÍTULOS ====== */
+h1 {
+    font-family: 'Jersey 15', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 1px 2px 0px var(--cor-botao);
+    color: var(--cor-texto);
+    line-height: 1.4;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    color: var(--cor-texto);
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 1em;
+    color: var(--cor-texto);
+    margin-bottom: 90px;
+    font-weight: 600;
+}
+
+/* ====== CARDS DE PERGUNTAS ====== */
+.card-pergunta {
+    background: var(--cor-destaque);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 6px solid var(--cor-texto);
+    animation: fadeIn 0.5s ease;
+    box-shadow: 0 5px 15px var(--cor-sombra);
+}
+
+.card-pergunta h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: var(--cor-texto);
+    font-weight: 700;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcao {
+    background: #ffefef;
+    border: 2px solid var(--cor-texto);
+    color: var(--cor-texto);
+    padding: 14px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1em;
+    transition: all 0.2s ease;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.opcao:hover {
+    background: var(--cor-botao);
+    transform: translateX(5px);
+}
+
+.opcao.selecionada {
+    background: var(--cor-texto);
+    color: var(--cor-botao);
+    font-weight: bold;
+}
+
+/* ====== BOTÕES ====== */
+.btn {
+    display: block;
+    margin: 25px auto 0;
+    background: var(--cor-botao);
+    color: var(--cor-texto);
+    border: 3px solid var(--cor-texto);
+    padding: 15px 45px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px var(--cor-texto);
+    font-family: 'Fredoka', sans-serif;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--cor-texto);
+}
+
+btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 var(--cor-texto);
+}
+
+.btn:disabled {
+    background: #b0b0b0;
+    color: #555;
+    border-color: #666;
+    cursor: not-allowed;
+    box-shadow: 0 5px 0 #666;
+}
+
+/* ====== RESULTADO DO TESTE (TIPOS) ====== */
+.tipos-vencedores {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.tipo-card {
+    background: var(--cor-destaque);
+    border-radius: 16px;
+    padding: 25px 40px;
+    text-align: center;
+    border: 3px solid var(--cor-texto);
+    min-width: 200px;
+    animation: fadeIn 0.6s ease;
+    box-shadow: 0 5px 15px var(--cor-sombra);
+}
+
+.tipo-card .bolinha {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    border: 2px solid var(--cor-texto);
+    box-shadow: 0 4px 12px var(--cor-sombra);
+}
+
+.tipo-card .nome-tipo {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--cor-texto);
+    line-height: 1.4;
+}
+
+/* ====== CARDS DE POKÉMON ====== */
+.grid-pokemons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card-pokemon {
+    background: var(--cor-destaque);
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 15px var(--cor-sombra);
+}
+
+.card-pokemon:hover {
+    transform: translateY(-8px);
+    background: var(--cor-botao);
+    border-color: var(--cor-texto);
+}
+
+.card-pokemon.selecionado {
+    border-color: var(--cor-texto);
+    background: var(--cor-botao);
+    transform: scale(1.05);
+}
+
+.card-pokemon .imagem {
+    width: 190px;
+    height: 190px;
+    image-rendering: pixelated;
+    margin: 0 auto 10px;
+    display: block;
+    filter: drop-shadow(0 4px 8px var(--cor-sombra));
+}
+
+.card-pokemon .nome {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--cor-texto);
+    margin-bottom: 5px;
+}
+
+.card-pokemon .geracao {
+    font-size: 0.9em;
+    color: var(--cor-texto);
+    opacity: 0.75;
+}
+
+/* ====== RESULTADO FINAL ====== */
+.resultado-final {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card-resultado {
+    background: var(--cor-destaque);
+    border-radius: 16px;
+    padding: 25px;
+    border: 3px solid var(--cor-texto);
+    min-width: 280px;
+    flex: 1;
+    animation: fadeIn 0.6s ease;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--cor-sombra);
+}
+
+.card-resultado .imagem-final {
+    width: 240px;
+    height: 240px;
+    image-rendering: pixelated;
+    margin: 0 auto 15px;
+    display: block;
+    filter: drop-shadow(0 6px 12px var(--cor-sombra));
+}
+
+.card-resultado .nome-final {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 1.8em;
+    color: var(--cor-texto);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.card-resultado .detalhe {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--cor-texto);
+    font-size: 0.95em;
+    text-align: left;
+    color: var(--cor-texto);
+}
+
+.card-resultado .detalhe span:first-child { color: var(--cor-texto); opacity: 0.75; }
+.card-resultado .detalhe span:last-child { color: var(--cor-texto); font-weight: bold; }
+
+/* ====== ANIMAÇÕES ====== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.escondido {
+    display: none !important;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 600px) {
+    .container { padding: 20px; }
+    h1 { font-size: 1.1em; }
+    .tipos-vencedores { flex-direction: column; align-items: center; }
+    .resultado-final { flex-direction: column; }
+    .card-pokemon .imagem {
+        width: 110px;
+        height: 110px;
+    }
+    .card-resultado .imagem-final {
+        width: 150px;
+        height: 150px;
+    }
+}

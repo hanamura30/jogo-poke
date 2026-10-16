@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descubra seu Pokémon Ideal !</title>
+
+    <!-- Fontes do Google: Press Start 2P (retrô) e Fredoka (arredondada) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <! TELA 1: PERGUNTAS >
+      <div id="tela-perguntas">
+        <h1>VAMOS DESCOBRIR OS SEUS PRINCIPAIS TIPOS DE POKÉMONS!!</h1>
+        <p class="subtítulo">Responda qual você se identifica mais.</p>
+        <div id="container-perguntas"></div>
+        <button class="btn" id="btn-finalizar" disabled>
+          Ver resultado do Teste
+        </button>
+      </div>
+
+      <! TELA 2: RESULTADO DO TESTE>
+      <div id="tela-resultado-teste" class="escondido">
+        <h1>SEUS TIPOS IDEAIS</h1>
+        <p class="subtítulo">
+          Com base nas suas respostas, esses são os dois tipos que combinam com
+          você:
+        </p>
+        <div class="tipos-vencedores" id="tipos-vencedores"></div>
+        <button class="btn" id="btn-ir-escolher">Escolher meus pokémons</button>
+      </div>
+
+      <! TELA 3: ESCOLHA DOS POKÉMONS >
+      <div id="tela-escolha-pokemon" class="escondido">
+        <h1>AGORA ESCOLHA SEUS PARCEIROS</h1>
+        <p class="subtítulo" id="instrucao-escolha"></p>
+        <div class="grid-pokemons" id="container-pokemons"></div>
+        <button class="btn" id="btn-confirmar-pokemons" disabled>
+          Confirmar Escolha
+        </button>
+      </div>
+
+      <! TELA 4: RESULTADO FINAL >
+      <!o tipo Sombrio não tem Pokémon de 1ª geração porque, na 1ª geração, o
+      tipo Sombrio ainda não existia (foi introduzido na 2ª geração). Por isso
+      ele tem dois da 2ª geração (Houndour e Umbreon). Isso é normal e não é uma
+      duplicata.>
+      <div id="tela-resultado-final" class="escondido">
+        <h1>Seus parceiros!</h1>
+        <p class="subtítulo">Aqui estão os cards dos seus pokémons:</p>
+        <div class="resultado-final" id="resultado-final"></div>
+        <button class="btn" ondblclick="location.reload()">
+          Jogar Novamente (double click)
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
