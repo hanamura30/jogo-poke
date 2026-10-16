@@ -26,6 +26,11 @@ Um teste interativo de personalidade que descobre quais tipos de Pokémon combin
 - Rosa suave e cinza;
 - Fontes: Varela Round e Jersey 15.
 
-## Autor
+# Autor
 
 Feito por Hanaiquê Simomura.
+
+# Jogue agora
+
+Clique aqui para jogar:
+https://hanamura30.github.io/jogo-poke/
